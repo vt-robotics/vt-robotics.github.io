@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
   <link rel="preload" href="{{ '/assets/fonts/texgyrepagella-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="site-title" href="{{ '/' | relative_url }}">VT Robotics</a>
+      <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="VT Robotics home">{% include logo.svg %}</a>
       <nav class="site-nav" aria-label="Main">
         <a href="{{ '/people/' | relative_url }}"{% if page.url == '/people/' %} aria-current="page"{% endif %}>People</a>
         <a href="{{ '/vrs/' | relative_url }}"{% if page.url == '/vrs/' %} aria-current="page"{% endif %}>VRS</a>
