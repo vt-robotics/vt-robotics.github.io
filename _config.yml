@@ -1,0 +1,19 @@
+# Site settings
+title: VT Robotics
+tagline: Robotics at Virginia Tech
+description: >-
+  Robotics at Virginia Tech. A starting point for students and visitors:
+  meet our robotics faculty and learn about the Virginia Robotics Symposium.
+url: "https://robotics.me.vt.edu"
+baseurl: ""
+lang: en
+
+# Build settings (both plugins are supported by GitHub Pages)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

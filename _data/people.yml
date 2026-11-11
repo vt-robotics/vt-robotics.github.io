@@ -1,0 +1,38 @@
+# One entry per faculty member, in the order they should appear (alphabetical by last name).
+#
+#   name:           full name
+#   title:          rank, for example "Associate Professor"
+#   department:     home department
+#   areas:          research areas, separated by commas (optional)
+#   website:        lab website (optional)
+#   website_label:  text for the link; defaults to "Lab website" (optional)
+#   picture:        path to a portrait in assets/images/people/ (optional; a gray
+#                   silhouette is shown when this is left out). Portraits are cropped
+#                   to 3:4, so a head-and-shoulders photo works best.
+
+- name: Dylan Losey
+  title: Associate Professor
+  department: Mechanical Engineering
+  areas: Human-robot interaction, robot learning, control
+  website: https://collab.me.vt.edu/
+  website_label: Collaborative Robotics Lab
+  picture: /assets/images/people/dylan-losey.jpg
+
+# ---- Placeholders: replace these with real faculty ----
+
+- name: Faculty Name (placeholder)
+  title: Title
+  department: Department
+  areas: Research area, research area, research area
+  website: https://www.vt.edu/
+
+- name: Faculty Name (placeholder)
+  title: Title
+  department: Department
+  areas: Research area, research area
+  website: https://www.vt.edu/
+
+- name: Faculty Name (placeholder)
+  title: Title
+  department: Department
+  areas: Research area, research area, research area

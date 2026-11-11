@@ -1,0 +1,22 @@
+---
+layout: default
+title: People
+description: Robotics faculty at Virginia Tech, with their departments, research areas, and lab websites.
+permalink: /people/
+---
+
+<h1>People</h1>
+
+<ul class="people">
+  {% for person in site.data.people %}
+  <li class="person">
+    <img src="{{ person.picture | default: '/assets/images/person-placeholder.svg' | relative_url }}" alt="{% if person.picture %}Portrait of {{ person.name }}{% endif %}" width="150" height="200" loading="lazy">
+    <div>
+      <h2>{{ person.name }}</h2>
+      <p>{{ person.title }}, {{ person.department }}</p>
+      {% if person.areas %}<p>{{ person.areas }}</p>{% endif %}
+      {% if person.website %}<p class="lab"><a href="{{ person.website }}">{{ person.website_label | default: 'Lab website' }}</a></p>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>

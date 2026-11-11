@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VT Robotics</title>
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: #ffffff;
-      color: #111111;
-    }
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    h1 {
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      margin: 0;
-      padding: 0 16px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <h1>VT Robotics</h1>
-</body>
-</html>
+---
+layout: default
+---
+
+<h1 class="visually-hidden">Robotics at Virginia Tech</h1>
+
+<img class="hero" src="{{ '/assets/images/home-placeholder.svg' | relative_url }}" alt="Placeholder for a photo of Virginia Tech robotics" width="1600" height="730">
+
+<p>Welcome to robotics at Virginia Tech!
+We advance robotics research from theory to practice.
+Our faculty and students work in labs across the university, spanning robotics topics:
+from biological inspiration to flight, from human-robot interaction to assistive devices,
+and from foundation models to agentic systems.
+Overall, our goal is to develop the fundamental technology that will make robots useful.</p>
+
+<h2>Start here</h2>
+<ul>
+  <li><a href="{{ '/people/' | relative_url }}">People</a>: Looking to join a lab or find a collaborator? Meet our robotics faculty, see what they work on, and follow the links to their labs.</li>
+  <li><a href="{{ '/vrs/' | relative_url }}">Virginia Robotics Symposium</a>: Each fall, robotics researchers from across Virginia meet for a day of talks and posters.</li>
+</ul>
