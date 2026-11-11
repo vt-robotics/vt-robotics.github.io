@@ -4,7 +4,21 @@ layout: default
 
 <h1 class="visually-hidden">Robotics at Virginia Tech</h1>
 
-<img class="hero" src="{{ '/assets/images/home-placeholder.svg' | relative_url }}" alt="Placeholder for a photo of Virginia Tech robotics" width="1600" height="730">
+<!-- Silent looping video. The poster is its first frame, shown while the video loads. -->
+<video class="hero" id="hero-video" autoplay muted loop playsinline width="1600" height="730"
+       poster="{{ '/assets/images/home-poster.jpg' | relative_url }}"
+       aria-label="Short clips of Virginia Tech students working with robots">
+  <source src="{{ '/assets/video/home.mp4' | relative_url }}" type="video/mp4">
+</video>
+<script>
+  // Visitors who ask their device for less motion get a still picture with a play button instead.
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var v = document.getElementById("hero-video");
+    v.removeAttribute("autoplay");
+    v.pause();
+    v.controls = true;
+  }
+</script>
 
 <p>Welcome to robotics at Virginia Tech!
 We advance robotics research from theory to practice.

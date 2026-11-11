@@ -4,3 +4,6 @@ _site/
 .sass-cache/
 vendor/
 .bundle/
+
+# Working files for the home page video (downloads, previews, drafts)
+_video/

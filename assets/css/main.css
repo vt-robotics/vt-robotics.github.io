@@ -86,7 +86,7 @@ p, ul, ol { margin: 0 0 1rem; }
 p { line-height: 1.5; }
 ul, ol { padding-left: 2rem; }
 
-img { max-width: 100%; height: auto; }
+img, video { max-width: 100%; height: auto; }
 
 a {
   color: var(--orange);
