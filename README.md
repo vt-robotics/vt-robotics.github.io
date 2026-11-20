@@ -1,5 +1,5 @@
 # vt-robotics.github.io
-Website for robotics at Virginia Tech: https://robotics.me.vt.edu
+Website for robotics at Virginia Tech: https://vt-robotics.github.io
 
 The site is built with [Jekyll](https://jekyllrb.com/). GitHub Pages builds it on every push to `main`.
 
