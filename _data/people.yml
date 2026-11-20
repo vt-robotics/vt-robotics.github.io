@@ -3,7 +3,8 @@
 #   name:           full name
 #   title:          rank, for example "Associate Professor"
 #   department:     home department
-#   area:           primary research area
+#   area:           primary research area; one only, since the People page can sort by it.
+#                   Spell it the same way for everyone who shares an area.
 #   website:        lab website (optional)
 #   website_label:  text for the link; defaults to "Lab website" (optional)
 #   picture:        path to a portrait in assets/images/people/ (optional; a gray
@@ -30,7 +31,7 @@
 - name: Simon Stepputtis
   title: Assistant Professor
   department: Mechanical Engineering
-  area: X
+  area: Robot Learning
   website: https://tealab.ai/
   website_label: TEA Lab
-  picture: /assets/images/people/simon-stepputtis.webp
+  picture: /assets/images/people/simon_stepputtis.jpg

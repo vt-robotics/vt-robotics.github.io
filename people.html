@@ -5,18 +5,63 @@ description: Robotics faculty at Virginia Tech, with their departments, research
 permalink: /people/
 ---
 
-<h1>People</h1>
+<div class="page-head">
+  <h1>People</h1>
+  <!-- Shown by the script at the bottom of this page; without JavaScript the list stays alphabetical. -->
+  <div class="sort" role="group" aria-label="Sort faculty" hidden>
+    <span>Sort by</span>
+    <button type="button" data-sort="name" aria-pressed="true">Name</button>
+    <button type="button" data-sort="area" aria-pressed="false">Area</button>
+  </div>
+</div>
 
 <ul class="people">
   {% for person in site.data.people %}
-  <li class="person">
+  <li class="person" data-area="{{ person.area | escape }}">
     <img src="{{ person.picture | default: '/assets/images/person-placeholder.svg' | relative_url }}" alt="{% if person.picture %}Portrait of {{ person.name }}{% endif %}" width="150" height="200" loading="lazy">
     <div>
       <h2>{{ person.name }}</h2>
       <p>{{ person.title }}, {{ person.department }}</p>
-      {% if person.areas %}<p>{{ person.areas }}</p>{% endif %}
+      {% if person.area %}<p>{{ person.area }}</p>{% endif %}
       {% if person.website %}<p class="lab"><a href="{{ person.website }}">{{ person.website_label | default: 'Lab website' }}</a></p>{% endif %}
     </div>
   </li>
   {% endfor %}
 </ul>
+
+<script>
+  // Sort control for the faculty list. "Name" is the order of _data/people.yml
+  // (alphabetical by last name). "Area" sorts by research area, keeping that
+  // same order within each area; anyone without an area goes last.
+  (function () {
+    var list = document.querySelector('.people');
+    var control = document.querySelector('.sort');
+    if (!list || !control) return;
+
+    var people = Array.prototype.slice.call(list.children);
+    var buttons = control.querySelectorAll('button');
+
+    function sortBy(mode) {
+      var order = people.slice();
+      if (mode === 'area') {
+        order.sort(function (a, b) {
+          var x = a.dataset.area, y = b.dataset.area;
+          if (x === y) return people.indexOf(a) - people.indexOf(b);
+          if (!x) return 1;
+          if (!y) return -1;
+          return x.localeCompare(y) || people.indexOf(a) - people.indexOf(b);
+        });
+      }
+      order.forEach(function (person) { list.appendChild(person); });
+      Array.prototype.forEach.call(buttons, function (button) {
+        button.setAttribute('aria-pressed', String(button.dataset.sort === mode));
+      });
+    }
+
+    control.addEventListener('click', function (event) {
+      var button = event.target.closest('button');
+      if (button) sortBy(button.dataset.sort);
+    });
+    control.hidden = false;
+  })();
+</script>
