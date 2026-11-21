@@ -18,3 +18,4 @@ exclude:
   - Gemfile.lock
   - vendor
   - logo        # original logo files; the site uses _includes/logo.svg and assets/images/favicon.svg
+  - wrangler.jsonc
