@@ -20,6 +20,14 @@
   website_label: ARCOL Lab
   picture: /assets/images/people/kaveh_hamed.jpg
 
+- name: Suyi Li
+  title: Associate Professor
+  department: Mechanical Engineering
+  area: Soft Robotics
+  website: https://dare.super.site/
+  website_label: DARE Lab
+  picture: /assets/images/people/suyi-li.jpg
+
 - name: Dylan Losey
   title: Associate Professor
   department: Mechanical Engineering
@@ -28,6 +36,14 @@
   website_label: Collaborative Robotics Lab
   picture: /assets/images/people/dylan-losey.jpg
 
+- name: Noel Naughton
+  title: Assistant Professor
+  department: Mechanical Engineering
+  area: Bio-Inspired Robots
+  website: https://naughtonlab.org/
+  website_label: Naughton Lab
+  picture: /assets/images/people/noel-naughton.jpg
+
 - name: Simon Stepputtis
   title: Assistant Professor
   department: Mechanical Engineering
@@ -35,3 +51,4 @@
   website: https://tealab.ai/
   website_label: TEA Lab
   picture: /assets/images/people/simon_stepputtis.jpg
+
